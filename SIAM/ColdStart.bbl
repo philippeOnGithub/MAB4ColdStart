@@ -1,0 +1,144 @@
+\begin{thebibliography}{10}
+
+\bibitem{DBLP:conf/nips/Abbasi-YadkoriPS11}
+Yasin Abbasi-Yadkori, D{\'a}vid P{\'a}l, and Csaba Szepesv{\'a}ri.
+\newblock Improved algorithms for linear stochastic bandits.
+\newblock In John Shawe-Taylor, Richard~S. Zemel, Peter~L. Bartlett, Fernando
+  C.~N. Pereira, and Kilian~Q. Weinberger, editors, {\em NIPS}, pages
+  2312--2320, 2011.
+
+\bibitem{agarwal09:_regres}
+Deepak Agarwal and Bee-Chung Chen.
+\newblock Regression-based latent factor models.
+\newblock In {\em KDD '09: Proceedings of the 15th ACM SIGKDD international
+  conference on Knowledge discovery and data mining}, pages 19--28. ACM SIGKDD,
+  ACM, June 28 - July 1 2009.
+
+\bibitem{Agarwal:2009:SME:1526709.1526713}
+Deepak Agarwal, Bee-Chung Chen, and Pradheep Elango.
+\newblock Spatio-temporal models for estimating click-through rate.
+\newblock In {\em Proceedings of the 18th international conference on World
+  wide web}, WWW '09, pages 21--30, New York, NY, USA, 2009. ACM.
+
+\bibitem{DBLP:conf/nips/AgarwalCEMPRRZ08}
+Deepak Agarwal, Bee-Chung Chen, Pradheep Elango, Nitin Motgi, Seung-Taek Park,
+  Raghu Ramakrishnan, Scott Roy, and Joe Zachariah.
+\newblock Online models for content optimization.
+\newblock In {\em Advances in Neural Information Processing Systems 21$^{th}$
+  (NIPS)}, pages 17--24, 2008.
+
+\bibitem{DBLP:journals/corr/abs-1209-3352}
+Shipra Agrawal and Navin Goyal.
+\newblock Thompson sampling for contextual bandits with linear payoffs.
+\newblock {\em CoRR}, abs/1209.3352, 2012.
+
+\bibitem{Auer:2002:FAM:599614.599677}
+Peter Auer, Nicol\`{o} Cesa-Bianchi, and Paul Fischer.
+\newblock Finite-time analysis of the multiarmed bandit problem.
+\newblock {\em Mach. Learn.}, 47(2-3):235--256, May 2002.
+
+\bibitem{DBLP:journals/siamcomp/AuerCFS02}
+Peter Auer, Nicol{\`o} Cesa-Bianchi, Yoav Freund, and Robert~E. Schapire.
+\newblock The nonstochastic multiarmed bandit problem.
+\newblock {\em SIAM J. Comput.}, 32(1):48--77, 2002.
+
+\bibitem{Billsus:1998:LCI:645527.657311}
+Daniel Billsus and Michael~J. Pazzani.
+\newblock Learning collaborative information filters.
+\newblock In {\em Proceedings of the Fifteenth International Conference on
+  Machine Learning}, ICML '98, pages 46--54, San Francisco, CA, USA, 1998.
+  Morgan Kaufmann Publishers Inc.
+
+\bibitem{gao07:_person}
+Fengrong Gao, Chunxiao Xing, Xiaoyong Du, and Shan Wang.
+\newblock Personalized service system based on hybrid filtering for digital
+  library.
+\newblock {\em Tsinghua Science \& Technology}, 12(1):1--8, 2007.
+
+\bibitem{lam08:_addres}
+Xuan~Nhat Lam, Thuc Vu, Trong~Duc Le, and Anh~Duc Duong.
+\newblock Addressing cold-start problem in recommendation systems.
+\newblock In {\em Proceedings of the 2nd International Conference on Ubiquitous
+  Information Management and Communication}, pages 208--211. ACM, 2008.
+
+\bibitem{Lashkari94collaborativeinterface}
+Yezdi Lashkari, Max Metral, and Pattie Maes.
+\newblock Collaborative interface agents.
+\newblock In {\em In Proceedings of the Twelfth National Conference on
+  Artificial Intelligence}, pages 444--449. AAAI Press, 1994.
+
+\bibitem{lekakos07}
+George Lekakos and George~M. Giaglis.
+\newblock A hybrid approach for improving predictive accuracy of collaborative
+  filtering algorithms.
+\newblock {\em User Modeling and User-Adapted Interaction}, 17(1-2):5--40,
+  2007.
+
+\bibitem{LinUCB}
+Lihong Li, Wei Chu, John Langford, and Robert~E. Schapire.
+\newblock A contextual-bandit approach to personalized news article
+  recommendation.
+\newblock {\em CoRR}, abs/1003.0146, 2010.
+
+\bibitem{manavoglu03:_probab}
+Eren Manavoglu, Dmitry Pavlov, and C.~Lee Giles.
+\newblock Probabilistic user behavior models.
+\newblock In {\em ICDM '03: Proceedings of the Third IEEE International
+  Conference on Data Mining}, page 203. IEEE Computer Society, 2003.
+
+\bibitem{marlin04:_collab}
+Benjamin Marlin.
+\newblock Collaborative filtering: A machine learning perspective.
+\newblock Technical report, University of Toronto, 2004.
+
+\bibitem{May-et-al:2012}
+Benedict~C. May, Nathan Korda, Anthony Lee, and David~S. Leslie.
+\newblock Optimistic bayesian sampling in contextual-bandit problems.
+\newblock {\em J. Mach. Learn. Res.}, 13(1):2069--2106, June 2012.
+
+\bibitem{park09:_pairw}
+Seung-Taek Park and Wei Chu.
+\newblock Pairwise preference regression for cold-start recommendation.
+\newblock In {\em RecSys '09: Proceedings of the third ACM conference on
+  Recommender systems}, pages 21--28. ACM, 2009.
+
+\bibitem{Schein:2002:MMC:564376.564421}
+Andrew~I. Schein, Alexandrin Popescul, Lyle~H. Ungar, and David~M. Pennock.
+\newblock Methods and metrics for cold-start recommendations.
+\newblock In {\em Proceedings of the 25th annual international ACM SIGIR
+  conference on Research and development in information retrieval}, SIGIR '02,
+  pages 253--260, NY, USA, 2002. ACM.
+
+\bibitem{Shi:2012:CLM:2365952.2365981}
+Yue Shi, Alexandros Karatzoglou, Linas Baltrunas, Martha Larson, Nuria Oliver,
+  and Alan Hanjalic.
+\newblock Climf: learning to maximize reciprocal rank with collaborative
+  less-is-more filtering.
+\newblock In {\em Proceedings of the sixth ACM conference on Recommender
+  systems}, RecSys '12, pages 139--146, NY, USA, 2012. ACM.
+
+\bibitem{xue09:_user}
+Gui-Rong Xue, Jie Han, Yong Yu, and Qiang Yang.
+\newblock User language model for collaborative personalized search.
+\newblock {\em ACM Transactions on Information Systems}, 27(2):1--28, 2009.
+
+\bibitem{contextualRecommendation}
+Yisong Yue, Sue~Ann Hong, and Carlos Guestrin.
+\newblock Hierarchical exploration for accelerating contextual bandits.
+\newblock In {\em ICML}, 2012.
+
+\bibitem{Zhou:2008:LPC:1424237.1424269}
+Yunhong Zhou, Dennis Wilkinson, Robert Schreiber, and Rong Pan.
+\newblock Large-scale parallel collaborative filtering for the netflix prize.
+\newblock In {\em Proceedings of the 4th international conference on
+  Algorithmic Aspects in Information and Management (AAIM)}, pages 337--348,
+  Berlin, Heidelberg, 2008. Springer-Verlag.
+
+\bibitem{zigoris06:_bayes}
+Philip Zigoris and Yi~Zhang.
+\newblock Bayesian adaptive user profiling with explicit \& implicit feedback.
+\newblock In {\em CIKM '06: Proceedings of the 15th ACM international
+  conference on Information and knowledge management}, pages 397--404. ACM,
+  2006.
+
+\end{thebibliography}

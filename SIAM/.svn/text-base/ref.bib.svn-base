@@ -1,0 +1,245 @@
+@inproceedings{Shi:2012:CLM:2365952.2365981,
+ author = {Shi, Yue and Karatzoglou, Alexandros and Baltrunas, Linas and Larson, Martha and Oliver, Nuria and Hanjalic, Alan},
+ title = {CLiMF: learning to maximize reciprocal rank with collaborative less-is-more filtering},
+ booktitle = {Proceedings of the sixth ACM conference on Recommender systems},
+ series = {RecSys '12},
+ year = {2012},
+ isbn = {978-1-4503-1270-7},
+ location = {Dublin, Ireland},
+ pages = {139--146},
+ numpages = {8},
+ url = {http://doi.acm.org/10.1145/2365952.2365981},
+ doi = {10.1145/2365952.2365981},
+ acmid = {2365981},
+ publisher = {ACM},
+ address = {NY, USA},
+ keywords = {collaborative filtering, learning to rank, less is more, matrix factorization, mean reciprocal rank},
+} 
+
+
+@article{May-et-al:2012,
+ author = {May, Benedict C. and Korda, Nathan and Lee, Anthony and Leslie, David S.},
+ title = {Optimistic Bayesian sampling in contextual-bandit problems},
+ journal = {J. Mach. Learn. Res.},
+ issue_date = {January 2012},
+ volume = {13},
+ number = {1},
+ month = jun,
+ year = {2012},
+ issn = {1532-4435},
+ pages = {2069--2106},
+ numpages = {38},
+ url = {http://dl.acm.org/citation.cfm?id=2503308.2343711},
+ acmid = {2343711},
+ publisher = {JMLR.org},
+ keywords = {Thompson sampling, contextual bandits, exploration-exploitation, multi-armed bandits, sequential allocation},
+} 
+@article{LinUCB,
+  author    = {Lihong Li and
+               Wei Chu and
+               John Langford and
+               Robert E. Schapire},
+  title     = {A Contextual-Bandit Approach to Personalized News Article
+               Recommendation},
+  journal   = {CoRR},
+  volume    = {abs/1003.0146},
+  year      = {2010},
+  ee        = {http://arxiv.org/abs/1003.0146},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@article{Auer:2002:FAM:599614.599677,
+ author = {Auer, Peter and Cesa-Bianchi, Nicol\`{o} and Fischer, Paul},
+ title = {Finite-time Analysis of the Multiarmed Bandit Problem},
+ journal = {Mach. Learn.},
+ issue_date = {May-June 2002},
+ volume = {47},
+ number = {2-3},
+ month = may,
+ year = {2002},
+ issn = {0885-6125},
+ pages = {235--256},
+ numpages = {22},
+ url = {http://dx.doi.org/10.1023/A:1013689704352},
+ doi = {10.1023/A:1013689704352},
+ acmid = {599677},
+ publisher = {Kluwer Academic Publishers},
+ address = {Hingham, MA, USA},
+ keywords = {adaptive allocation rules, bandit problems, finite horizon regret},
+} 
+@inproceedings{DBLP:conf/nips/Abbasi-YadkoriPS11,
+  author    = {Yasin Abbasi-Yadkori and
+               D{\'a}vid P{\'a}l and
+               Csaba Szepesv{\'a}ri},
+  title     = {Improved Algorithms for Linear Stochastic Bandits},
+  booktitle = {NIPS},
+  year      = {2011},
+  pages     = {2312-2320},
+  ee        = {http://books.nips.cc/papers/files/nips24/NIPS2011_1243.pdf},
+  crossref  = {DBLP:conf/nips/2011},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+@proceedings{DBLP:conf/nips/2011,
+  editor    = {John Shawe-Taylor and
+               Richard S. Zemel and
+               Peter L. Bartlett and
+               Fernando C. N. Pereira and
+               Kilian Q. Weinberger},
+  title     = {Advances in Neural Information Processing Systems 24: 25th
+               Annual Conference on Neural Information Processing Systems
+               2011. Proceedings of a meeting held 12-14 December 2011,
+               Granada, Spain},
+  booktitle = {NIPS},
+  year      = {2011},
+  ee        = {http://books.nips.cc/nips24.html},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@inproceedings{Zhou:2008:LPC:1424237.1424269,
+ author = {Zhou, Yunhong and Wilkinson, Dennis and Schreiber, Robert and Pan, Rong},
+ title = {Large-Scale Parallel Collaborative Filtering for the Netflix Prize},
+ booktitle = {Proceedings of the 4th international conference on Algorithmic Aspects in Information and Management (AAIM)},
+ year = {2008},
+ isbn = {978-3-540-68865-5},
+ location = {Shanghai, China},
+ pages = {337--348},
+ numpages = {12},
+ url = {http://dx.doi.org/10.1007/978-3-540-68880-8_32},
+ doi = {10.1007/978-3-540-68880-8_32},
+ acmid = {1424269},
+ publisher = {Springer-Verlag},
+ address = {Berlin, Heidelberg},
+} 
+@inproceedings{Billsus:1998:LCI:645527.657311,
+ author = {Billsus, Daniel and Pazzani, Michael J.},
+ title = {Learning Collaborative Information Filters},
+ booktitle = {Proceedings of the Fifteenth International Conference on Machine Learning},
+ series = {ICML '98},
+ year = {1998},
+ isbn = {1-55860-556-8},
+ pages = {46--54},
+ numpages = {9},
+ url = {http://dl.acm.org/citation.cfm?id=645527.657311},
+ acmid = {657311},
+ publisher = {Morgan Kaufmann Publishers Inc.},
+ address = {San Francisco, CA, USA},
+} 
+
+
+@inproceedings{Agarwal:2009:SME:1526709.1526713,
+ author = {Agarwal, Deepak and Chen, Bee-Chung and Elango, Pradheep},
+ title = {Spatio-temporal models for estimating click-through rate},
+ booktitle = {Proceedings of the 18th international conference on World wide web},
+ series = {WWW '09},
+ year = {2009},
+ isbn = {978-1-60558-487-4},
+ location = {Madrid, Spain},
+ pages = {21--30},
+ numpages = {10},
+ url = {http://doi.acm.org/10.1145/1526709.1526713},
+ doi = {10.1145/1526709.1526713},
+ acmid = {1526713},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {content recommendation, ctr positional correlation},
+} 
+@inproceedings{contextualRecommendation,
+author = {Yisong Yue and Sue Ann Hong and Carlos Guestrin},
+title = {Hierarchical Exploration for Accelerating Contextual Bandits},
+booktitle = {ICML},
+year = 2012,
+}
+@misc{ic12,
+author ={J. Mary and Aurélien Garivier and
+L. Li and 
+R. Munos and
+O. Nicol and
+R. Ortner and
+P. Preux},
+title = {ICML Exploration and Exploitation 3 - New Challenges},
+year = {2012},
+booktitle = {explochallenge.inria.fr/}
+}
+
+@inproceedings{DBLP:conf/nips/AgarwalCEMPRRZ08,
+  author    = {Deepak Agarwal and
+               Bee-Chung Chen and
+               Pradheep Elango and
+               Nitin Motgi and
+               Seung-Taek Park and
+               Raghu Ramakrishnan and
+               Scott Roy and
+               Joe Zachariah},
+  title     = {Online Models for Content Optimization},
+  booktitle = {Advances in Neural Information Processing Systems 21$^{th}$ (NIPS)},
+  year      = {2008},
+  pages     = {17-24},
+  ee        = {http://books.nips.cc/papers/files/nips21/NIPS2008_0916.pdf},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+@proceedings{DBLP:conf/nips/2008,
+  editor    = {Daphne Koller and
+               Dale Schuurmans and
+               Yoshua Bengio and
+               L{\'e}on Bottou},
+  title     = {Advances in Neural Information Processing Systems 21, Proceedings
+               of the Twenty-Second Annual Conference on Neural Information
+               Processing Systems, Vancouver, British Columbia, Canada,
+               December 8-11, 2008},
+  booktitle = {NIPS},
+  publisher = {Curran Associates, Inc.},
+  year      = {2009},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+@inproceedings{Schein:2002:MMC:564376.564421,
+ author = {Schein, Andrew I. and Popescul, Alexandrin and Ungar, Lyle H. and Pennock, David M.},
+ title = {Methods and metrics for cold-start recommendations},
+ booktitle = {Proceedings of the 25th annual international ACM SIGIR conference on Research and development in information retrieval},
+ series = {SIGIR '02},
+ year = {2002},
+ isbn = {1-58113-561-0},
+ location = {Tampere, Finland},
+ pages = {253--260},
+ numpages = {8},
+ url = {http://doi.acm.org/10.1145/564376.564421},
+ doi = {10.1145/564376.564421},
+ acmid = {564421},
+ publisher = {ACM},
+ address = { NY, USA},
+ keywords = {collaborative filtering, content-based filtering, graphical models, information retrieval, performance evaluation, recommender systems},
+} 
+
+@INPROCEEDINGS{Lashkari94collaborativeinterface,
+    author = {Yezdi Lashkari and Max Metral and Pattie Maes},
+    title = {Collaborative Interface Agents},
+    booktitle = {In Proceedings of the Twelfth National Conference on Artificial Intelligence},
+    year = {1994},
+    pages = {444--449},
+    publisher = {AAAI Press}
+}
+
+@article{DBLP:journals/siamcomp/AuerCFS02,
+  author    = {Peter Auer and
+               Nicol{\`o} Cesa-Bianchi and
+               Yoav Freund and
+               Robert E. Schapire},
+  title     = {The Nonstochastic Multiarmed Bandit Problem},
+  journal   = {SIAM J. Comput.},
+  volume    = {32},
+  number    = {1},
+  year      = {2002},
+  pages     = {48-77},
+  ee        = {http://dx.doi.org/10.1137/S0097539701398375},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@article{DBLP:journals/corr/abs-1209-3352,
+  author    = {Shipra Agrawal and
+               Navin Goyal},
+  title     = {Thompson Sampling for Contextual Bandits with Linear Payoffs},
+  journal   = {CoRR},
+  volume    = {abs/1209.3352},
+  year      = {2012},
+  ee        = {http://arxiv.org/abs/1209.3352},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}

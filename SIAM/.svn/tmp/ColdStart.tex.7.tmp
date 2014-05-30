@@ -1,0 +1,1060 @@
+% Anonymous or not; does not seem so...
+% I think it is not anonymous as it says in the website " All submissions should clearly present the author information including the names of the authors, the affiliations and the emails."
+
+% All papers accepted should have a maximum length of 9 pages (single-spaced, 2 column, 10 point font, and at least 1" margin on each side). Authors should use US Letter (8.5" x 11") paper size. Papers must have an abstract with a maximum of 300 words and a keyword list with no more than 6 keywords. Authors are required to submit their papers electronically in PDF format (postscript files can be converted using standard converters) to https://cmt.research.microsoft.com/SDM2014/ by 11:59 PM (PST), October 13, 2013.
+
+
+
+%% Revised 10/03/01 to remove page numbering
+%% Revised 10/19/01 to add space after run-in titles
+%%         word space no longer needed after run-ins
+%%         
+%%         Possible spacing bug in \subsection fixed
+%%
+%% This is soda2e.all. This file is to be used for creating a paper
+%% in the ACM/SIAM Preprint series with LaTeX2E. It consists of the following 
+%% two files:
+%%
+%%       ltexpprt.tex ---- an example and documentation file
+%%       ltexpprt.sty ---- the macro file
+%%
+%% To use, cut this file apart at the appropriate places.  You can run the
+%% example file with the macros to get sample output.
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  CUT HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%  ltexpprt.tex  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is ltexpprt.tex, an example file for use with the SIAM LaTeX2E
+% Preprint Series macros. It is designed to provide double-column output. 
+% Please take the time to read the following comments, as they document
+% how to use these macros. This file can be composed and printed out for
+% use as sample output.
+
+% Any comments or questions regarding these macros should be directed to:
+%
+%                 Donna Witzleben
+%                 SIAM
+%                 3600 University City Science Center
+%                 Philadelphia, PA 19104-2688
+%                 USA
+%                 Telephone: (215) 382-9800
+%                 Fax: (215) 386-7999
+%                 e-mail: witzleben@siam.org
+
+
+% This file is to be used as an example for style only. It should not be read
+% for content.
+
+%%%%%%%%%%%%%%% PLEASE NOTE THE FOLLOWING STYLE RESTRICTIONS %%%%%%%%%%%%%%%
+
+%%  1. There are no new tags.  Existing LaTeX tags have been formatted to match
+%%     the Preprint series style.    
+%%
+%%  2. You must use \cite in the text to mark your reference citations and 
+%%     \bibitem in the listing of references at the end of your chapter. See
+%%     the examples in the following file. If you are using BibTeX, please
+%%     supply the bst file with the manuscript file.
+%% 
+%%  3. This macro is set up for two levels of headings (\section and 
+%%     \subsection). The macro will automatically number the headings for you.
+%%
+%%  5. No running heads are to be used for this volume.
+%% 
+%%  6. Theorems, Lemmas, Definitions, etc. are to be double numbered, 
+%%     indicating the section and the occurence of that element
+%%     within that section. (For example, the first theorem in the second
+%%     section would be numbered 2.1. The macro will 
+%%     automatically do the numbering for you.
+%%
+%%  7. Figures, equations, and tables must be single-numbered. 
+%%     Use existing LaTeX tags for these elements.
+%%     Numbering will be done automatically.
+%%   
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\documentclass[twoside,leqno,twocolumn]{article}  
+\usepackage{ltexpprt} 
+\usepackage[pdftex]{graphicx}
+\usepackage{subfigure}
+\usepackage{url}
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+%\newtheorem{theorem}{Lemma}
+\newtheorem{mydef}{Definition}
+
+\usepackage{amsfonts,amsmath}
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\mat}[1]{\mathbf{#1}}
+\input{raccourcis.tex}
+
+\usepackage[usenames,dvipsnames]{xcolor}
+\newcommand{\pp}[1]{\color{red}(pp) #1\color{black}}
+\newcommand{\jm}[1]{{\color{TealBlue}(jm) #1\color{black}}}
+\newcommand{\hai}[1]{\color{blue}(hai) #1\color{black}}
+
+% PP : sorry, I do not have expl3 on my system. So, I remove it. I can no longer compile (-(
+% we'll fix that later!
+%% \usepackage{expl3}
+%% \ExplSyntaxOn
+%% \newcommand\latinabbrev[1]{
+%%   \peek_meaning:NTF . {% Same as \@ifnextchar
+%%     #1\@}%
+%%   { \peek_catcode:NTF a {% Check whether next char has same catcode as \'a, i.e., is a letter
+%%       #1.\@ }%
+%%     {#1.\@}}}
+%% \ExplSyntaxOff
+
+%% %Omit final dot from each def.
+%% \def\eg{\latinabbrev{e.g}}
+%% \def\etal{\latinabbrev{et al}}
+%% \def\etc{\latinabbrev{etc}}
+%% \def\ie{\latinabbrev{i.e}}
+
+% As I understand, the only reason for expl3 is to define this \latinabbrev command. That's a great thing, but let's focus on the ideas for the moment.
+\newcommand{\eg}{\textit{e.g.}}
+\newcommand{\etal}{\textit{et al.}}
+\newcommand{\etc}{\textit{etc.}}
+\newcommand{\ie}{\textit{i.e.}}
+
+\begin{document}
+
+
+%\setcounter{chapter}{2} % If you are doing your chapter as chapter one,
+%\setcounter{section}{3} % comment these two lines out.
+
+%\title{A New Method for Cold-start Problems in Recommendation Systems}
+\title{Cold-start Problems in Recommendation Systems via Contextual-bandit Algorithms}
+\author{
+Thanh Hai Nguyen\footnote{INRIA Lille Nord Europe, 40 avenue Halley, 59650 Villeneuve d'Ascq, France, firstname.lastname@inria.fr}
+\and 
+J\'er\'emie Mary\footnote{University of Lille / LIFL (CNRS) \& INRIA Lille Nord Europe, 59650 Villeneuve d'Ascq, France, firstname.lastname@inria.fr}
+\and
+Philippe Preux\footnotemark[2]
+}
+\date{}
+
+\maketitle
+ 
+%\pagenumbering{arabic}
+%\setcounter{page}{1}%Leave this line commented out.
+
+%------------------- Astract ----------------------
+\begin{abstract}
+% PP: With a few minor fixes:
+In this paper, we cast the cold-start problem in recommendation systems as a contextual-bandit problem. No additional information on new users and new items is needed. We consider all the past ratings of previous users as contextual information to be integrated into the recommendation framework. We adapt the LinUCB algorithm for contextual-bandit problems to our case and propose new efficient methods for solving the cold-start problems in recommendation systems. The experiments were conducted on three different publicly available data sets, namely Movielens, Netflix and Yahoo!Music. The new proposed methods were also compared with other techniques. Experiments showed that our new method significantly improves upon all these methods.
+% previous abstract
+%In this paper, we provide formal definitions of the cold-start problems in recommendation systems via contextual-bandit problems. No additional information on new users and new items are needed. We consider all the past ratings of previous users as contextual information to be integrated into prediction framework. We adapt the LinUCB algorithms for contextual-bandit problems to our case and propose new efficient methods for solving the cold-start problems in recommendation systems. The experiments were conducted on three different public available data sets which are Movielen, Netflix and Yahoo!Music. The new proposed methods were also compared with other techniques. The results showed the outperform of our new methods.  
+\end{abstract}
+
+%------------------- Introduction ----------------------
+\section{Introduction}
+
+The goal of a recommender system is to select some items (movies,
+music, books, news, images, web pages, \ldots) that are likely to be
+of interest for a user on a webpage. This is done by matching some
+user based characteristics with item based characteristics. These
+characteristics can be information over the items to recommend (the
+content-based approach) or the user's social environment (the
+collaborative filtering approach)\pp{?? I do not understand: using
+  social information is not collab filtering}. We consider the quality
+of a recommendation to be the interest of the user for the item being
+recommended.
+
+In the content based approach, a description of the items is readily
+available. We have to build a model of the user's tastes using the
+feedback we receive --- this feedback can be implicit (\eg{} clicks,
+browsing, \ldots) or explicit (\eg{} rates). When a new user ---
+without any side information --- is introduced in the system, we need
+to collect some data in order to build a good enough model before
+being able to produce any valuable recommendation. This is a first
+kind of cold start problem that we qualify as the \emph{new user
+  problem}. In this setting we want to balance the exploration of the tastes of the new user and the usage of this modeling.  
+% In this case, we have to set the balance between the
+%quality of modeling of the user and the quality of our
+%recommendations.
+\pp{I do not understand this last sentence. Seems odd to me.}
+
+In the collaborative filtering approaches, recommendations are made
+trying to identify users with similar preferences. Of course, it
+suffers from the new user problem, but it also suffers from a
+\emph{new item problem}. Indeed, if a new item is introduced, the
+system will not recommend it until some user provides some positive
+feedback on it. Of course, the probability of receiving some feedback
+is related to the number of recommendations of that item, so it sounds
+reasonable to provide a \emph{boost} to the new items. Of course, this
+boost has to be designed carefully and so as to reflect a balance
+between modeling of the new items and quality of the recommendations.\pp{same remark}
+
+Cold start problems naturally arise in statistical data modeling when
+not enough data is available. A common way to solve the new item
+problem it is to assign a default rate to new items based on the
+ratings assigned by the community to other similar items \cite{}. Item
+similarity is computed according to the items content-based
+characteristics. Of course, this only holds when content-based
+characteristics are available.
+
+In this paper, we are going to show that an approach based on the
+bandit problem can be used to tackle both the new user problem, and
+the new item problem in the case where no content-based information is
+available. We are also going to present how to use them in a scalable
+way and present better results than classical matrix decomposition
+methods in terms of regret (defined in section \ref{TODO regret} )
+\pp{regret has not been introduced so that this last sentence is not easy to understand for someone not acquainted with bandits.}
+%As the descriptions of the items is known, bandits algorithms (LinUCB and kernel UCB can be used to)
+
+
+The core idea paper is to use the known rates as a context filling the missing values with a well chosen one.
+
+%% \pp{I try to figure out what we want to say in this section, and the line of reasoning.}
+
+%% \begin{itemize}
+%%   \item we consider the recommendation problem where items are rated by users. We assume we have no side information about neither users, nor items
+%%   \item in particular, we consider the case where new users or new items come into play: how to recommend in these case, performing better than random choice of items? This is a cold-start problem.
+%%   \item We draw from sequential decision making under uncertainty approaches
+%%   \item because of the uncertainty, there is no way to escape from taking risks making mistake, in order to learn the environment and perform better in the future (aiming at performing optimally in the long run in a stationary environment: consistency expectation)
+%%   \item each time we make a recommendation, the key point is balancing between making the best choice according to the current knowledge of the environment, and probing the uncertainty remaining in the environment to improve the performance
+
+%% \scriptsize{} May be, we should say somewhere that it is relevant to decide when to stop exploring because good choices have been learnt already and what's left to rate is basically bullshit. \normalsize{}
+
+%%   \item Michal just come to go to lunch. I stop here...
+%% \end{itemize}
+
+
+%------------------- Problem Definition ----------------------
+\section{Problem Definition}
+Assume that at current time we have a set of $n$ possible items to recommend. Let $X \in \R^{k\times n}$ be a matrix of description of theses items (one item per column). 
+\hai{I am a bit confused here with X as a description matrix of theses items and U as description matrix of users. As we are saying that we don't use any side information from items and users by any means (in reality or by assumption). Here we have only one available matrix X of previous ratings with many missing values.}\\
+
+For all $i \in {1,\ldots,m}$ Let $\theta_i \in \R^{k'}$ be a row vector describing the the $i^{th}$ user. $b(\theta_i) \in \R^n$ a vector of tastes of this user for the $n$ items. The $j^{th}$ value of $b(\theta_i)$ is the affinity of the user $i$ for the $j^{th}$ item. The affinity is built using implicit of explicit feedback over the tastes of the users. Some of the values are unkown. 
+
+Let $U$ be the matrix of description of the users. The $i^{th}$ row of $U$ is $\theta_i$. 
+Let $A \in \R^{m \times n}$ the affinity matrix. The $i^{th}$ row of $A$ is the vector $b(\theta_i)$.
+
+A common goal is to predict the missing values of A using the available descriptions over the users and/or the items. 
+Classically the error of an algorithm is seen as it's error when reconstructing $A$ --- the users tastes --- from the available data. A classic measure is the root mean square error (RMSE) but some other authors proposed different criterions as rank preservation \cite{something}.   
+
+To reconstruct the missing values, a very common assumption is to consider that it exists common a latent description space between items and users where a linear relation holds between the tastes and the vectors of descriptions. Formally for each user we want to write $b(\theta_i) = \theta_i \cdot X + \epsilon_i$. When performed for all users at the same time, this method is called matrix factorization as we are trying to write $A = U \cdot X + \epsilon$.
+
+But this methodology fails to capture the behavior of the recommender algorithm when a new user or items comes. This is because for rows or columns of $A$ with almost no information collected in the dataset there is no way to know if our reconstruction is correct or not.
+In a real application, we receive the data in an online way: after each recommendation to a user we have the possibility to collect a feedback. This means that this is possible to recommend some items is order to collect some information on the user (\ie categorize it) in order to build better recommendations latter. In particular we are going to show that it is not optimal to always recommend the "best" item according to the current modelization of the tastes of the user --- this strategy is designed as being \emph{greedy}. 
+ 
+As in this online setting the RMSE evaluation is not enough, we have to rely on a different evaluation process. Assuming that a new user is visiting us, a reasonable recommender systems tries to present the item with the highest affinity among the unknown ones for that user. So as in the bandits framework \cite{somethingonbandits}, we can consider a cumulated regret perspective. The idea of cumulated regret is to start at $0$ and to be increased after each timestep of the difference between the choice of our recommender policy and the best possible choice. Translated in our setting this means at each time step $t$
+
+\begin{enumerate}
+	\item we receive the visit of an user $i_t$. For this user at timestep $t$ some of the values $b(\theta_{i_t})$ are known by the recommender and some other are hidden. We note $b^*_t$ the highest hidden value of $b(\theta_{i_t})$.
+	\item Our recommender chose an item to recommend $j_t = \pi(i_t,t)$. The corresponding value of $b(\theta_{i_t})$ is revealed. The regret is increased by  $b^{*}_{t}-b_{j_t}$
+\end{enumerate}
+
+The objective is to find a best strategy that provides the maximal total reward or minimal total regret:
+	$$ 
+	CummulativeRegret = \sum_{t=1}^{T}(b^{*}_{t}-b_{\pi(i_t,t)}(\theta_{i{_t}}))
+	$$
+
+
+Of course, the computation of the cumulated regret requires the knowledge of all the values of $A$  which can be problematic on some real datasets. 
+ 
+%Of course for a new user $i$,  $\theta_i$ has to be estimated. 
+
+\jm{TODO : deal with non stationarity ? }
+
+
+\jm{We could note $u_i$ instead of $\theta_i$ }
+
+\jm{end. Should we invert n et m in the whole paper ? Usually n is the number of rows and in the rates matrix the users are often presented as rows.}
+
+\jm{I think that every $X\theta$ should be replaced by $\theta$X. Are you ok ?}
+
+\pp{I do not understand where we are going in this section.}
+
+\hai{Here I just want to (a) formalize the cold-start problems and to (b) show that the assumption of LinUCB holds. This is also (c) for some notations that we are going to use in the later sections. Maybe you have better ideas.}\\
+
+\jm{I'm considering cutting from here...}
+Given a matrix with integer values: $X=(x_{ij}):m \times n$ and $x_{ij} \in \{1,2,..,K\}$. A function $b(\theta)=(b_{j}(\theta))_{j=1}^{n}$ is calculated via $X$ and a vector $\epsilon=(\epsilon_{j})_{j=1}^{n}$: 
+\begin{equation}
+	b(\theta)=X\theta + \epsilon
+\end{equation}	\label{GenerealProbFormulation}
+%	$$
+%	b(\theta)=X\theta + \epsilon
+%	$$
+where $\theta\in \mathbf{R}^{m},\epsilon \in \mathbf{R}^{n}$ and the values of $b(\theta)$ are integer as well $b_{j}(\theta) \in \{1,2,..,K\}$.
+
+\
+
+Suppose that the variable $\theta$ and the function values $(b_{j}(\theta))_{j=1}^{n}$ are unknown, but the maximal value $b^{*}$ of $b(\theta)$ is known: $b^{*}=\max_{j}(b_{j}(\theta))$. Given $T$ is the times of playing a game. The detail of the game is following: A player can pick up one position $j_{t}$ at a time $t$ and then she gets a reward that is the function value $b_{j_{t}}(\theta_{t})(t=1,..,T)$.
+
+The objective is to find a best strategy that provides the maximal total reward or minimal total regret:
+	$$ 
+	CummulativeRegret = \sum_{t=1}^{T}(b^{*}_{t}-b_{j_{t}}(\theta_{t}))
+	$$
+
+This problem formulation can be used to model different applications, such as the cold-start problems in the recommendation systems~\cite{..}. In fact, the matrix $X$ is the ratings of $m$ past users for $n$ items. The function $b(\theta)$ is the ratings values of the new user or the new item. The $\epsilon$ values model the noise in the ratings of users.
+
+Below, we provide formal definitions of the cold-start problems in the recommendation systems. 
+\jm{...to here}
+
+
+\jm{We could introduced contextual bandits there explaining that their require full knowledge of the context but solves the exploiration/exploitation dilemma }
+
+\subsection{New User/Item Problem}
+
+~\\
+\jm{I propose to say something like 
+\begin{itemize}
+	\item We select at random $n$ users $n>m$. The tastes of theses users are seen as the descriptions of the items. This means that we use as $X$ matrix some of the rows of $A$. This special set of users are designed as the \emph{base users}.
+	\item As the description of the items contains some missing values, we are going to fill them using different strategies:
+	\begin{itemize}
+		\item Put some zeros (or a low value)
+		\item Use any matrix completion strategy
+	\end{itemize}
+	\item Then select items using a contextual bandit algorithm. 
+\end{itemize}
+}
+
+% Definition of the new user/item problem
+\begin{mydef}[The new user/item problem]
+In the problem (\ref{GenerealProbFormulation}), if $rank(X)=n=m$ and $\epsilon=0$, then the problem (\ref{GenerealProbFormulation}) becomes the new user/item problem in recommendation systems that is to find the best strategy that minimize the cumulative regret.
+\end{mydef}
+
+In this definition, we assume that $rank(X)=n=m$, which means the number of users and the number of items in $X$ are the same and the ratings of different users are linearly independent from each others. In other words, the ratings of an user isn't a linear combination of the ratings of the other users. In recommendation systems, this assumption holds. The reason is that if the number $n$ of items is fixed, then at some point we can easily find $m=n$ users with linearly independent ratings. We call the matrix $X$ the basic-ratings matrix.
+
+Now if we add a new user, then obviously the ratings $b(\theta)$ of the new user does not change the $rank(X)$. Therefore, there always exists a vector $\theta\in \mathbf{R}^{m}$ so that $b(\theta)=X\theta$. The difficulty now is that we do not know neither $\theta$ nor $b(\theta)$. However, our task is to quickly learn $\{j\in \{1,..,n\}|b_{j}(\theta)=b^{*}\}$ with an assumption that $b^{*}$ is known in advance. 
+ 
+\subsection{New System Problem}
+% Definition of the new system problem
+\begin{mydef}[The new system problem]
+In the problem (\ref{GenerealProbFormulation}), if $rank(X)=\min\{n,m\}$, then the problem (\ref{GenerealProbFormulation}) becomes the new system problem that is to find the best strategy that minimize the cumulative regret.
+\end{mydef}
+
+For this problem, the vector $\epsilon$ can be zero or non-zero vector. If $\epsilon=0$, then we have the following equation $b(\theta)=X\theta$, which means the ratings of the new user is a linear combination of the previous users' rates in the matrix $X$. In other words, adding a new user/item does not change the $rank(X)$. However, the $\epsilon$ can also be non-zero, thus the $rank(X)$ of the matrix $X$ will be changed. 
+
+In the next sections, we will introduce the bandit algorithms and their perspectives for solving these cold-start problem in recommendation systems.
+%------------------ Bandit algorithms and perspectives --------------------------------
+%------------------- Related work ----------------------
+\section{Related Work}
+
+
+\subsection{Bandit algorithms and perspectives for cold-start problems}
+
+\pp{I've typed this section about bandits. Notations in equations should be made uniform in the paper.}
+
+At each request, we have to select an item to recommend to the present user. This selection is based on uncertain information. Therefore, we may either select an item that is most likely to appeal to the user (based on uncertain grounds, though), or select an item that is likely to bring new information. This means that we may either select an item that will bring immediate benefit, or select an item that will let the system improve in the longer run. This is the usual dilemma between exploitation (of already available knowledge) \textit{versus} exploration (of uncertainty), encountered in sequential decision making under uncertainty problems. This problem has been addressed for decades in the bandit framework that we briefly introduced now.
+
+Let us consider a set of possible choices. Each choice is associated to an unknown probability of reward. The game is repeated and the goal is to accumulate the maximal amount of rewards. In the present context, rewards may be binary (click/no-click), or belong to a set of values (a set of possible marks, ranging from 1 to 5). This problem has been studied for decades, many approaches have been proposed. Let us introduce a few of them that we use later in this paper:
+
+\begin{itemize}
+  \item \textbf{random} consists in picking up one of the possible choices, uniformly at random.
+  \item \textbf{$\epsilon$-greedy} consists in picking up the choice that is currently considered the best with probability $\epsilon$ (exploit current knowledge), and pick it up uniformly at random with probability $1-\epsilon$ (explore to improve knowledge). Typically, $\epsilon$ is varying along time so that the choices get greedier and greedier as knowledge is gathered.
+  \item \textbf{UCB} consists in selecting the choice that maximizes the following function: $\hat\mu_j + \sqrt{\frac{2\ln t}{t_j}}$ where $t$ is the current timestep (the current recommendation is the $t^{\mbox{\scriptsize{}th}}$, $\mu_j$ is the average reward obtained when selecting choice $j$, $t_j$ is the number of times choice $j$ as been selected so far. In this equation, $\hat\mu_j$ favors a greedy selection (exploitation) while the second term $\sqrt{\frac{2\ln t}{t_j}}$ favors exploration driven by uncertainty: this term quantifies in an appropriate manner the uncertainty about choice $j$: it is a confidence bound on the true value of the expectation of reward when selecting choice $j$. This second term initially dominates (since no knowledge is available initially) and along the iterations, as $t$ increases, the first term becomes predominant. 
+
+    UCB actually defines a family of algorithms, the simplest having been introduced. One may consider not only the empirical mean to select the choice, but also higher moments, such as the variance (UCB-V), or even the distribution of rewards (such as KL-UCB).
+
+    UCB was proved to be optimal in the sense that it balances exploration and exploitation in an optimal way. The cost due to exploration is minimal ($O (\ln t)$).
+  \item \textbf{EXP3} ...
+  \item \textbf{Thompson sampling} is a Bayesian approach to this problem. It consists in computing the probability of success of each choice, and then greedily selecting the choice associated with maximum \textit{a posteriori} probability.
+\end{itemize}
+
+UCB and Thompson sampling both benefit from a strong theoretical understanding, optimal behavior, and remarkable experimental performance.
+
+
+In the setting we consider, we have information about the possible
+choices and we may also have information about the user to recommend
+to. This is known as side information, or context, hence bandit with
+side information or contextual bandit. The approaches considered so
+far do not take this side information into account. There are various
+approaches to contextual bandits (OTS \cite{May-et-al:2012}, ...);
+here, we concentrate on LinUCB \cite{LinUCB}. LinUCB assumes that a
+context is associated to each choice in the form of a vector of real
+features $\vv \in \mathbb{R}^k$ and that the expectation of the reward
+associated to an arm is $\uu^*\cdot\vv$, where $\uu^*$ is an unknown
+vector.  LinUCB follows the same scheme as UCB in the sense that it
+selects the choice with the largest upper confidence bound on the
+expected reward:
+
+$$j_t = \argmax_j \hat\uu.\vv_j^T + \alpha\sqrt{\vv_j\A^{-1}\vv_j^T},$$
+
+where $\hat\uu$ is an estimate of $\uu^*$, $\alpha$ is a parameter and
+$\A = \sum_{t'=1}^{t-1}\vv_{j_{t'}}.\vv_{j_{t'}}^T+\Id$, where $\Id$
+is the identity matrix. Note that $\hat\uu.\vv_j^T$ corresponds to an
+estimate of the expected reward, while $\sqrt{\vv_j\A^{-1}\vv_j^T}$ is
+an optimistic correction of that estimate.
+
+
+
+
+%To provide a proof of concepts, we conducted an experiment on several data sets.... It turns out that the multi-armed bandit algorithms give better results than the random strategy in solving cold-start problems of recommendation systems. 
+
+However, according to the cold-start problems defined in Section 2\pp{?3}, there is still some useful information, which is the ratings matrix $X$ from previous users, that has not been used. In the next section, we consider the matrix $X$ as a context matrix and propose to cast the cold-start problems into a contextual-bandit problems. We apply the LinUCB algorithms for the new system problem and proposed a new adapted LinUCB for the new user/item problem.
+
+
+
+\subsection{Other approaches}
+
+\jm{TODO}
+To be included:
+\begin{itemize}
+\item "Contextual Collaborative Filtering via Hierarchical Matrix Factorization", SDM12
+\end{itemize}
+
+
+
+%------------------- LinUCB-based Method for Cold-start Problems ----------------------
+\section{Contextual-bandit approach for cold-start problems}
+
+
+In the setting considered in this paper, we assume that there is no contextual information available about neither the items, nor the users. However, the ratings already recorded from users on items may be used as a context for the new users. We elaborate on this idea in the subsequent section.
+
+\subsection{LinUCB for new system problems:} In this case, we want to build a complete new recommendation system of $m$ users for $m$ items. In other words, we are going to build the square matrix $X=(x_{ij})$ of dimension $m$ so that the cummulative regret is minimal. 
+
+At any time $t$, the rating of a new user for a particular item $j$ is linear in its $m$-dimentional context vector $X_{t,j}$ with some unknown coefficient vector $\theta_{t,j}$ and a real value $\epsilon_{t,j}$:
+$$
+b_{t,j}(\theta) = X^{T}_{t,j}\theta_{t,j} + \epsilon_{t,j}	
+$$
+where $X_{t,j}=(x_{1,j},x_{2,j},..,x_{t,j},0,..,0)$, with $x_{i,j} (i=1..t)$ are the ratings of previous users for the item $j$. The values of $x_{i,j} (i=t+1,..,m)$ are unknown, thus we set them to zero. As there always exists $\theta_{\epsilon_{j}}$ such that $\epsilon_{t,j}=X^{T}_{t,j}\theta_{\epsilon_{j}}$, we can represent the rating of the new user as follows:
+$$
+b_{t,j}(\theta) = X^{T}_{t,j}\theta_{t,j} + X^{T}_{t,j}\theta_{\epsilon_{t,j}} = X^{T}_{t,j}\theta^{\prime}_{t,j} 
+$$ 
+where $\theta^{\prime}_{t,j}=\theta_{t,j}+\theta_{\epsilon_{t,j}}$. Let $D_{t,j}$ be a context description matrix of dimension $t\times m$, where rows are the context vector $X_{i,j}(i=1..t)$. When applying the redge regression to the training data $(D_{t,j},b_{j})$, we get the estimation of the unknown variable $\theta^{\prime}$ as follows:
+$$
+\hat{\theta^{\prime}_{j}} = (D^{T}_{t,j}D_{t,j}+I_{m})^{-1}D^{T}_{t,j}b_{j}
+$$
+where $I_{m}$ is the $m\times m$ identity matrix. As shown in~\cite{}, with probability at least $1-\delta$ we have:
+$$
+|X^{T}_{t,j}\hat{\theta^{\prime}_{t,j}}-E[b_{t,j}(\theta^{\prime)}|X^{T}_{t,j}]|\leq \alpha\sqrt{X^{T}_{t,j}(A_{t,j})^{-1}X_{t,j}}
+$$
+for any $\delta > 0$, $\alpha=1+\sqrt{ln(1/\delta)/2}$ and where $A_{t,j} = D^{T}_{t,j}D_{t,j}+I_{m}$.
+
+This inquality gives the popular UCB strategy that guides the selection of the item $s$ at time $t$ to recommend to the new user~\cite{•}:
+$$
+s = argmax_{j}(X^{T}_{t,j}\hat{\theta^{\prime}_{t,j}}+\alpha\sqrt{X^{T}_{t,j}(A_{t,j})^{-1}X_{t,j}})
+$$
+
+The LinUCB algorithm for the new system problem is given as follows:
+% Description of the bandit setting for the new system problem
+\begin{algorithm}
+\label{LP-based}
+\caption{LinUCB for new system problem}
+\begin{algorithmic}[1]
+\Procedure{LinUCB}{$T,\alpha,m$}
+\State Pick up randomly an item.
+\For {$t$ in $1:T$}
+	\State Observe $X_{t,j}=(x_{1,j},..,x_{t,j},0,..,0)$
+	\For {$j$ in $1:m$}
+		\If {$j$ is new}
+			\State $A_{j} = I_{m}$; $b_{j} = 0_{m\times 1}$	
+		\EndIf
+	\State $\hat{\theta_{j}^{\prime}}=A^{-1}_{j}b_{j}$
+	\State $p_{t,j} = X^{T}_{t,j}\hat{\theta_{t,j}^{\prime}}+\alpha\sqrt{X^{T}_{t,j}(A_{t,j})^{-1}X_{t,j}}$
+	\EndFor
+	\State Choose item $s= argmax_{j}\{p_{t,j}\}$ 
+	\State Observe a real ratings $r_{t,s}$
+	\State $A_{t,s}=A_{t,s}+X_{t,s}X^{T}_{t,s}$
+	\State $b_{s} = b_{s}+r_{t,s}X_{t,s}$	  	
+\EndFor
+\State Return $CummulativeRegret$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{LinUCB for new user/item problem:} In this case, we assume that there is a basic rating matrix $X=(X_{j})^{m}_{j=1}$ of dimention $m\times m$. We do not require that the $X$ to be the full rating matrix. Because in practice of recommendation systems, it is difficult to get all the ratings of the users for all available items. However, it is neccessary that every user in $X$ should have at least a rating. The missing values in $X$ can be filled by zero, or avarage values or the values approximated by using matrix decomposition techniques, such as SVD~\cite{}. We will discuss about this more in the experiment part.
+
+A new user at time $t$ will come and her rating for a particular item $j$ is:
+$$
+b_{t,j}(\theta) = X^{T}_{t,j}\theta_{t,j}= X^{T}_{j}\theta_{t}
+$$
+
+This case is different from the case of the new system problem. In fact, the $\epsilon$ is always zero and the $\theta_{t,j}$ is unique and the same with all different items $j(j=1..m)$. Moreover, the context vector $X_{t,j}$ is the $j$-column of the matrix $X$, which will not be changed over new users. In general, the vector $X_{t,j}$ can be extended whenever a new user's rating is observed. However, the computational complexity will be increased dramatically as long as we get more new users. In the followings, we will use the $\theta_{t}$ and the $X_{j}$ instead of the $\theta_{t,j}$ and the $X_{t,j}$, respectively.
+
+Repeat the analysis described above, we get the similar inequality for the case of new user/item problem:
+$$
+|X^{T}_{j}\theta_{t}-E[b_{t,j}(\theta)|X^{T}_{j}]|\leq \alpha\sqrt{X^{T}_{j}(A_{t,j})^{-1}X_{j}}
+$$
+for any $\delta > 0$, $\alpha=1+\sqrt{ln(1/\delta)/2}$ and $A_{t,j} = D^{T}_{t,j}D_{t,j}+I_{m}$. The context description matrix $D_{t,j}$ is given as follows: $D_{t,j} = (X_{i,j})_{i=1}^{t}$, where $X_{1,j}=X_{2,j}=..=X_{t,j} = X_{j}$. It can be easily seen that: $D^{T}_{t,j}D_{t,j}+I_{m} = tX_{j}X^{T}_{j}+I_{m}$. Therefore, 
+$$
+|X^{T}_{j}\theta_{t}-E[b_{t,j}(\theta)|X^{T}_{j}]|\leq \alpha\sqrt{X^{T}_{j}(tX_{j}X^{T}_{j}+I_{m})^{-1}X_{t,j}}
+$$
+
+Obviously, we can apply the standard LinUCB algorithm for this case. However, the efficiency of the algorithm will decreased over the time because when the size of $D_{t,j}$ increases, the inversion of the matrix $A_{t,j}$ is harder and slower. It is desirable to get more efficient algorithm than the standard LinUCB. Below, we attempt to achieve a new adapted LinUCB(A-LinUCB) for the new user/item recommendation system problem and will show its performance in the experiment part. 
+
+\begin{lemma} For all $t\geq 1$ and $X_{j} \in [0,1]^{m}$, the following inequation holds:
+$$
+(tX_{j}X^{T}_{j}+I_{m})^{-1} \leq (X_{j}X^{T}_{j}+I_{m})^{-1}
+$$ 
+\end{lemma}
+
+
+Following the lemma, we have a new inequality for A-LinUCB as follows:
+$$
+|X^{T}_{j}\theta_{t}-E[b_{t,j}(\theta)|X^{T}_{j}]|\leq \alpha\sqrt{X^{T}_{j}(X_{j}X^{T}_{j}+I_{m})^{-1}X_{j}}
+$$
+
+Even though the new proposed A-LinUCB has a larger confidence interval than the standard LinUCB, in the experiment we will show that the performance is still good as long as we have a flexibility in selecting appropriate values of the $\alpha$. Obviously, the algorithm A-LinUCB is very efficient to handle a large number of new users/items.
+
+As the confidence interval $(X^{T}_{j}(X_{j}X^{T}_{j}+I_{m})^{-1}X_{j})$ for each item does not change over time, it may be a question about the impact of the exploration on the actual recommendation results. In other word, what if we do not explore different items by setting $\alpha$ to zero. It turns out that in practice we still need a little exploration because when $\alpha=0$, the performance of the algorithms will be dramatically decreased. The details of this discussion will be provided in the experiment part. 
+
+% Description of the bandit setting for the new user/item problem
+\begin{algorithm}
+\label{LP-based}
+\caption{LinUCB for new user/item problem}
+\begin{algorithmic}[1]
+\Procedure{A-LinUCB}{$T,\alpha,X$}
+\State Pick up randomly an item.
+\State Store all the matries $A_{j} = I_{m}+X_{j}X^{T}_{j}$
+\For {$t$ in $1:T$}
+	\For {$j$ in $1:m$}
+		\If {$j$ is new}
+			\State $b_{j} = 0_{m\times 1}$	
+		\EndIf
+	\State $\hat{\theta_{t}}=A^{-1}_{j}b_{j}$
+	\State $p_{t,j} = X^{T}_{j}\hat{\theta_{t}}+\alpha\sqrt{X^{T}_{j}(A_{j})^{-1}X_{j}}$
+	\EndFor
+	\State Choose item $s= argmax_{j}\{p_{t,j}\}$
+	\State Observe a real ratings $r_{t,s}$
+	\State $b_{s} = b_{s}+r_{t,s}X_{t,s}$	  	
+\EndFor
+\State Return $CummulativeRegret$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+%------------------- Experiment ----------------------
+\section{Experiment}
+In this section, we first provide the detail on the data sets used in the experiment. We then describe the experimental settings of the proposed algorithms to be implement as well as of the other methods to be compared with. Finally, we analyze and discuss about the experimental results.
+%============= Data sets ===================
+\subsection{Data sets}
+For evaluating the performance of the new proposed algorithms, we used three different publicly available data sets, namely Movielen~\cite{}, Netflix~\cite{} and the Yahoo!Music~\cite{}. The data sets Netflix and Yahoo!Music contain some users that have not any ratings for any items. We eliminated these users from the original data sets. Because with these users, it will not be possilbe to estimate the regret $(b_{t}^{*}-b_{j_{t}}(\theta_{t}))$ since $b_{t}^{*}$ is not available. In more detail, originally the Netflix data set contains 100,000 ratings (from 0 to 5, where 0 = not rated) of 68,357 users on 17,770 movies. After the elimination, we obtained a data set that has 13,545 ratings of 6423 users on 1250 items. With the original Yahoo!Music data set, we have 11,557,943 ratings of 98,111 artists by 1,948,882 anonymous users. We reduced the data to a smaller one, which contains 20,361,089 ratings of 50,080 artists by 483,273 users. In Table.., we summarize the data sets in our experiments. 
+
+%---------Number of users and items for our experiments--------
+\begin{table}
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline
+Datasets & No. Users & No. Items & No. Ratings \\
+\hline
+Movielen & 6,040 & 3,952 & 1,000,209\\
+\hline
+Netflix & 6,423 & 1,250 & 13,545 \\
+\hline  
+Yahoo!Music & 483,273 & 50,080 & 20,361,089 \\
+\hline
+\end{tabular}
+\caption{Number of users, items and ratings in datasets after eliminating the users without any votes from original datasets.}
+\end{table}
+
+These reduced data sets still have many missing ratings values from users. We must usually deal with these missing values before making any predictions or recommendations to a user. We can use the average values to fill the missing ratings of a previous user on a particular item. Recently many matrix decomposition techniques are applied, for example, in~\cite{} and demonstrated to be novel methods. However, in many cases for the efficiency reason, the missing values are skipped and set to zero....
+
+In fact, we conducted a small experiment, in which we compared these three different techniques. It turns out that the simplest method with filling the missing values by zero works best as shown in Table... Therefore, in the following experiment we will use only this technique.
+
+%--------------Three methods to deal with missing values ---------------
+\begin{table}
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline
+Dataset & By zero & By average & By SVD \\
+\hline
+Movielen & 3008.19 & 3008.19 & memory?\\
+\hline
+Netflix & 3680 & 3680 & memory? \\
+\hline  
+Yahoo!Music & 989.56 & 989.56 & 1143.81 \\
+\hline
+\end{tabular}
+\caption{Cummulative regrets for the new user recommendation system to compare three different approaches in dealing with missing values, namely by zero value, by average value and by SVD.}
+\end{table}
+
+
+%============= Experiment setting ===================
+\subsection{Experiment setting}
+We separate the settings for two cases: 1) the complete new recommendation system and 2) the new user/item recommendation system.
+
+\textit{Ad.1} To implement the Algorithm 1, there is no specific setting requirement, except we must choose the $\alpha$ value from the beginning. In our case, we select $\alpha=0.001$, which is the best upon several different attempts. We compared the Algorithm 1 with six other different methods, namely random strategy (Ran), Epsilon greedy(EG)~\cite{}, UCB~\cite{•}, EXP3~\cite{•} and Thompson sampling(TS)~\cite{•}. The more detail settings for these methods are given as follows:
+\begin{itemize}
+\item Ran:
+\item EG:
+\item UCB:
+\item EXP3:
+\item TS:
+\end{itemize}
+
+With each method, we ran 50 times and obtained the average cummulative regret at the end. All the experimental results for this case are shown in tables... Note that there are two ways of building a complete new recommendation system. Either we add new users to the system, or we consider new items of the systems. The Table .. and Table .. are corresponded to the first and the second approaches, respectively.
+
+\textit{Ad.2} We first ran the A-LinUCB algorithm with $\alpha=0$. The reason is to see whether we need an exploration during the recommendation process or not. It turns out that the A-LinUCB algorithm performed much worse in this case as shown in Table...This means a lillte exploration contributed a large impact to the recommendation results.
+
+%Cummulative regret
+\begin{table}
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline
+A-LinUCB & Movielen & Netflix & Yahoo!Music \\
+\hline
+$\alpha=0$ & 3491.39 & 3857 & 1514.15 \\
+\hline
+$\alpha=0.001$ & 3008.19 & 3680 & 989.56 \\
+\hline
+\end{tabular}
+\caption{Cummulative regrets for new user recommendation system to compare between A-LinUCB ($\alpha=0$) with A-LinUCB ($\alpha=0.001$).}
+\end{table}
+
+We also compared the A-LinUCB algorithm with the standard LinUCB to verify if the A-LinUCB is still good in terms of performance when the confidence interval is larger than the one of the standard LinUCB. Of course, the A-LinUCB is much more efficient than the standard LinUCB. As shown in tables, it is worthy to use A-LinUCB...
+%Cummulative regret
+\begin{table}
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline
+Methods & Movielen & Netflix & Yahoo!Music \\
+\hline
+Stand.LinUCB & 4717.4 & 3855.2 & 1478.6 \\
+\hline
+A-LinUCB & 3008.19 & 3680 & 989.56 \\
+\hline
+\end{tabular}
+\caption{Cummulative regrets for new user recommendation system to compare between the standard LinUCB and the A-LinUCB.}
+\end{table}
+
+%Time running
+\begin{table}
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline
+Methods & Movielen & Netflix & Yahoo!Music \\
+\hline
+Stand.LinUCB & 49 mins & 41 mins & 49 mins \\
+\hline
+A-LinUCB & 4.5 mins & 4 mins & 5 mins \\
+\hline
+\end{tabular}
+\caption{Running time to compare between the standard LinUCB and the A-LinUCB.}
+\end{table}
+
+Finally, we compared the A-LinUCB algorithm with six other methods described above. All the experimental results are given in tables....
+%========== Results and Analysis =============
+\subsection{Results and Analysis}
+
+%----------For the new system problem-----------
+%Follow the new users
+\begin{table}
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline
+Methods & Movielen & Netflix & Yahoo!Music \\
+\hline
+Random & 1924.72 & 931.43 & 384.8 \\
+\hline
+EGreedy & 1549.2 & 928.75 & 384.1 \\
+\hline  
+UCB & 1935.4 & 931.9 & 384.67 \\
+\hline
+EXP3 & 1924.24 & 929.83 & 384.46 \\
+\hline
+TS & 1923 & 929.9 & 323.78 \\
+\hline
+LinUCB & 1410.6 & 929.9 & 327.49 \\
+\hline
+\end{tabular}
+\caption{Cummulative regrets for the complete new recommendation system, in which \textbf{we added new users}.}
+\end{table}
+%---------------------------------------------
+\begin{figure*}[ht!]
+\centering
+\begin{center}
+\subfigure[New system on Movielen]{\includegraphics[width=.32\textwidth]{newSys-addedUser-Movielen.pdf}}
+\subfigure[New system on Netflix]{\includegraphics[width=.32\textwidth]{newSys-addedUser-Netflix.pdf}}
+\subfigure[New system on Yahoo!Music]{\includegraphics[width=.32\textwidth]{newSys-addedUser-Yahoo.pdf}}
+\end{center}
+\caption{Cummulative regrets for the complete new recommendation system, in which \textbf{we added new users}.}
+\label{fig:NewSysRecSys-addedUser}
+\end{figure*}
+%---------------------------------------------
+%Follow the new items
+\begin{table}
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline
+Methods & Movielen & Netflix & Yahoo!Music \\
+\hline
+Random & 1570.11 & 512.08 & 87.86 \\
+\hline
+EGreedy & 1474.08 & 512.2 & 88.11 \\
+\hline  
+UCB & 1569.79 & 513.2 & 87.76 \\
+\hline
+EXP3 & 1568.95 & 512.72 & 87.85 \\
+\hline
+TS & 1588.99 & 512.2 & 88.11 \\
+\hline
+LinUCB & 1268.6 & 512.2 & 88.11 \\
+\hline
+\end{tabular}
+\caption{Cummulative regrets for the complete new recommendation system, in which \textbf{we added new items}.}
+\end{table}
+%---------------------------------------------
+\begin{figure*}[ht!]
+\centering
+\begin{center}
+\subfigure[New system on Movielen]{\includegraphics[width=.32\textwidth]{newSys-addedItem-Movielen.pdf}}
+\subfigure[New system on Netflix]{\includegraphics[width=.32\textwidth]{newSys-addedItem-Netflix.pdf}}
+\subfigure[New system on Yahoo!Music]{\includegraphics[width=.32\textwidth]{newSys-addedItem-Yahoo.pdf}}
+\end{center}
+\caption{Cummulative regrets for the complete new recommendation system, in which \textbf{we added new items}.}
+\label{fig:NewSysRecSys-addedItem}
+\end{figure*}
+
+%--------------For the new user problem ---------------
+\begin{table}
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline
+Methods & Movielen & Netflix & Yahoo!Music \\
+\hline
+Random & 4785.76 & 3853.76 & 1510.06\\
+\hline
+EGreedy & 3234.52 & 3848.6 & 1148.01 \\
+\hline  
+UCB & 4763.6 & 3851.6 & 1511.99 \\
+\hline
+EXP3 & 4776.76 & 3853.12 & 1510.75 \\
+\hline
+TS & 3822 & 3854 & 1313.70 \\
+\hline
+A-LinUCB & 3008.1 & 3680 & 989.56 \\
+\hline
+\end{tabular}
+\caption{Cummulative regrets for the \textbf{new user} recommendation system.}
+\end{table}
+%---------------------------------------------
+\begin{figure*}[ht!]
+\centering
+\begin{center}
+\subfigure[New user on Movielen]{\includegraphics[width=.32\textwidth]{newUser-Movielen.pdf}}
+\subfigure[New user on Netflix]{\includegraphics[width=.32\textwidth]{newUser-Netflix.pdf}}
+\subfigure[New user on Yahoo!Music]{\includegraphics[width=.32\textwidth]{newUser-Yahoo.pdf}}
+\end{center}
+\caption{Cummulative regrets for the \textbf{new user} recommendation systems.}
+\label{fig:NewUserRecSys}
+\end{figure*}
+
+%----------------For the new item problem-----------
+\begin{table}
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline
+Methods & Movielen & Netflix & Yahoo!Music \\
+\hline
+Random & 2242.75 & 168.44 & 319.36\\
+\hline
+EGreedy & 2022.07 & 168.8 & 318.96 \\
+\hline  
+UCB & 2240.79 & 168.2 & 318.02 \\
+\hline
+EXP3 & 2241.31 & 168.92 & 319.38 \\
+\hline
+TS & 2170.79 & 168.8 & 318.96 \\
+\hline
+A-LinUCB & 1998.9 & 160.8 & 271.32 \\
+\hline
+\end{tabular}
+\caption{Cummulative regrets for the \textbf{new item} recommendation system.}
+\end{table}
+%---------------------------------------------
+\begin{figure*}[ht!]
+\centering
+\begin{center}
+\subfigure[New item on Movielen]{\includegraphics[width=.32\textwidth]{newItem-Movielen.pdf}}
+\subfigure[New item on Netflix]{\includegraphics[width=.32\textwidth]{newItem-Netflix.pdf}}
+\subfigure[New item on Yahoo!Music]{\includegraphics[width=.32\textwidth]{newItem-Yahoo.pdf}}
+\end{center}
+\caption{Cummulative regrets for the \textbf{new item} recommendation systems.}
+\label{fig:NewItemRecSys}
+\end{figure*}
+%------------------- Conclusions ----------------------
+\section{Conclusions}
+
+
+%------------------- ACK ----------------------
+\section{Acknowledgments}
+
+
+%------------------- Reference ----------------------
+\begin{thebibliography}{99}
+
+\bibitem{May-et-al:2012}
+B~C. May and N. Korda and A. Lee and D.~S. Leslie, {\em Optimistic Bayesian Sampling in Contextual-Bandit Problems }, Journal of Machine Learning Research, \textbf{13}, pp. 2069-−2106, 2012
+
+\bibitem{LinUCB}
+L. Li and W. Chu and J. Langford and R.E.J. Schapire, {\em A contextual-bandit approach to personalized news article recommendation},
+Proc.\@ of the 19th international conference on World wide web (WWW),
+pp. 661--670, ACM Press, 2010
+\end{thebibliography}
+\end{document}
+
+
+%------------------------------ For edition -------------------------------------
+
+%\section{Problem Specification.}In this paper, we consider the solution of the $N \times
+%N$ linear
+%system
+%\begin{equation} \label{e1.1}
+%A x = b
+%\end{equation}
+%where $A$ is large, sparse, symmetric, and positive definite.  We consider
+%the direct solution of (\ref{e1.1}) by means of general sparse Gaussian
+%elimination.  In such a procedure, we find a permutation matrix $P$, and
+%compute the decomposition
+%\[
+%P A P^{t} = L D L^{t}
+%\]
+%where $L$ is unit lower triangular and $D$ is diagonal.  
+%
+% 
+%\section{Design Considerations.}Several good ordering algorithms (nested dissection and
+%minimum degree)
+%are available for computing $P$  \cite{GEORGELIU}, \cite{ROSE72}.
+%Since our interest here does not
+%focus directly on the ordering, we assume for convenience that $P=I$,
+%or that $A$ has been preordered to reflect an appropriate choice of $P$.
+%
+%Our purpose here is to examine the nonnumerical complexity of the
+%sparse elimination algorithm given in  \cite{BANKSMITH}.
+%As was shown there, a general sparse elimination scheme based on the
+%bordering algorithm requires less storage for pointers and
+%row/column indices than more traditional implementations of general
+%sparse elimination.  This is accomplished by exploiting the m-tree,
+%a particular spanning tree for the graph of the filled-in matrix.
+%
+%\begin{theorem} The method  was extended to three
+%dimensions. For the standard multigrid
+%coarsening
+%(in which, for a given grid, the next coarser grid has $1/8$
+%as many points), anisotropic problems require plane
+%relaxation to
+%obtain a good smoothing factor.\end{theorem} 
+%
+%Our purpose here is to examine the nonnumerical complexity of the
+%sparse elimination algorithm given in  \cite{BANKSMITH}.
+%As was shown there, a general sparse elimination scheme based on the
+%bordering algorithm requires less storage for pointers and
+%row/column indices than more traditional implementations of general
+%sparse elimination.  This is accomplished by exploiting the m-tree,
+%a particular spanning tree for the graph of the filled-in matrix.
+%Several good ordering algorithms (nested dissection and minimum degree)
+%are available for computing $P$  \cite{GEORGELIU}, \cite{ROSE72}.
+%Since our interest here does not
+%focus directly on the ordering, we assume for convenience that $P=I$,
+%or that $A$ has been preordered to reflect an appropriate choice of $P$.
+%
+%\begin{proof} In this paper we consider two methods. The first method
+%is
+%basically the method considered with two differences:
+%first, we perform plane relaxation by a two-dimensional
+%multigrid method, and second, we use a slightly different
+%choice of
+%interpolation operator, which improves performance
+%for nearly singular problems. In the second method coarsening
+%is done by successively coarsening in each of the three
+%independent variables and then ignoring the intermediate
+%grids; this artifice simplifies coding considerably.
+%\end{proof}
+%
+%Our purpose here is to examine the nonnumerical complexity of the
+%sparse elimination algorithm given in  \cite{BANKSMITH}.
+%As was shown there, a general sparse elimination scheme based on the
+%bordering algorithm requires less storage for pointers and
+%row/column indices than more traditional implementations of general
+%sparse elimination.  This is accomplished by exploiting the m-tree,
+%a particular spanning tree for the graph of the filled-in matrix.
+%
+%\begin{Definition}{\rm We describe the two methods in \S 1.2. In \S\ 1.3. we
+%discuss
+%some remaining details.}
+%\end{Definition}
+%
+%Our purpose here is to examine the nonnumerical complexity of the
+%sparse elimination algorithm given in  \cite{BANKSMITH}.
+%As was shown there, a general sparse elimination scheme based on the
+%bordering algorithm requires less storage for pointers and
+%row/column indices than more traditional implementations of general
+%sparse elimination.  This is accomplished by exploiting the m-tree,
+%a particular spanning tree for the graph of the filled-in matrix.
+%Several good ordering algorithms (nested dissection and minimum degree)
+%are available for computing $P$  \cite{GEORGELIU}, \cite{ROSE72}.
+%Since our interest here does not
+%focus directly on the ordering, we assume for convenience that $P=I$,
+%or that $A$ has been preordered to reflect an appropriate choice of $P$.
+%
+%Our purpose here is to examine the nonnumerical complexity of the
+%sparse elimination algorithm given in  \cite{BANKSMITH}.
+%As was shown there, a general sparse elimination scheme based on the
+%bordering algorithm requires less storage for pointers and
+%row/column indices than more traditional implementations of general
+%sparse elimination.  
+%
+%\begin{lemma} We discuss first the choice for $I_{k-1}^k$
+%which is a generalization. We assume that $G^{k-1}$ is
+%obtained
+%from $G^k$
+%by standard coarsening; that is, if $G^k$ is a tensor product
+%grid $G_{x}^k \times G_{y}^k \times G_{z}^k$,
+%$G^{k-1}=G_{x}^{k-1} \times G_{y}^{k-1} \times G_{z}^{k-1}$,
+%where $G_{x}^{k-1}$ is obtained by deleting every other grid
+%point of $G_x^k$ and similarly for $G_{y}^k$ and $G_{z}^k$.
+%\end{lemma}
+% 
+%To our knowledge, the m-tree previously has not been applied in this
+%fashion to the numerical factorization, but it has been used,
+%directly or indirectly, in several optimal order algorithms for
+%computing the fill-in during the symbolic factorization phase
+%[4] - [10], [5], [6]. In \S 1.3., we analyze the complexity of the old and new
+%approaches to the intersection problem for the special case of
+%an $n \times n$ grid ordered by nested dissection. The special
+%structure of this problem allows us to make exact estimates of
+%the complexity. To our knowledge, the m-tree previously has not been applied in this
+%fashion to the numerical factorization, but it has been used,
+%directly or indirectly, in several optimal order algorithms for
+%computing the fill-in during the symbolic factorization phase
+%[4] - [10], [5], [6].
+%
+%In \S 1.2, we review the bordering algorithm, and introduce
+%the sorting and intersection problems that arise in the
+%sparse formulation of the algorithm.  
+%In \S 1.3., we analyze the complexity of the old and new
+%approaches to the intersection problem for the special case of
+%an $n \times n$ grid ordered by nested dissection. The special
+%structure of this problem allows us to make exact estimates of
+%the complexity. To our knowledge, the m-tree previously has not been applied in this
+%fashion to the numerical factorization, but it has been used,
+%directly or indirectly, in several optimal order algorithms for
+%computing the fill-in during the symbolic factorization phase
+%[4] - [10], [5], [6].
+%
+%
+%For the old approach, we show that the
+%complexity of the intersection problem is $O(n^{3})$, the same
+%as the complexity of the numerical computations.  For the
+%new approach, the complexity of the second part is reduced to
+%$O(n^{2} (\log n)^{2})$.  
+%
+%To our knowledge, the m-tree previously has not been applied in this
+%fashion to the numerical factorization, but it has been used,
+%directly or indirectly, in several optimal order algorithms for
+%computing the fill-in during the symbolic factorization phase
+%[4] - [10], [5], [6]. In \S 1.3., we analyze the complexity of the old and new
+%approaches to the intersection problem for the special case of
+%an $n \times n$ grid ordered by nested dissection. The special
+%structure of this problem allows us to make exact estimates of
+%the complexity. To our knowledge, the m-tree previously has not been applied in this
+%fashion to the numerical factorization, but it has been used,
+%directly or indirectly, in several optimal order algorithms for
+%computing the fill-in during the symbolic factorization phase
+%[4] - [10], [5], [6].
+%This is accomplished by exploiting the m-tree,
+%a particular spanning tree for the graph of the filled-in matrix.
+%To our knowledge, the m-tree previously has not been applied in this
+%fashion to the numerical factorization, but it has been used,
+%directly or indirectly, in several optimal order algorithms for
+%computing the fill-in during the symbolic factorization phase
+%\cite{EISENSTAT} - \cite{LIU2}, \cite{ROSE76},  \cite{SCHREIBER}.
+%
+%\subsection{Robustness.}We do not
+%attempt to present an overview
+%here, but rather attempt to focus on those results that
+%are relevant to our particular algorithm.
+%This section assumes prior knowledge of the role of graph theory
+%in sparse Gaussian elimination; surveys of this role are
+%available in \cite{ROSE72} and \cite{GEORGELIU}. More general
+%discussions of elimination trees are given in
+%\cite{LAW} - \cite{LIU2}, \cite{SCHREIBER}.
+%Thus, at the $k$th stage, the bordering algorithm consists of
+%solving the lower triangular system
+%\begin{equation} \label{1.2}
+% L_{k-1}v = c
+%\end{equation}
+%and setting
+%\begin{eqnarray} 
+%\ell &=& D^{-1}_{k-1}v , \\
+%\delta &=& \alpha - \ell^{t} v .
+%\end{eqnarray}
+%
+%\begin{figure}
+%\vspace{14pc}
+%\caption{This is a figure 1.1.}
+%\end{figure}
+%
+%\section{Robustness.} We do not
+%attempt to present an overview
+%here, but rather attempt to focus on those results that
+%are relevant to our particular algorithm.
+% 
+%\subsection{Versatility.}The special
+%structure of this problem allows us to make exact estimates of
+%the complexity.  For the old approach, we show that the
+%complexity of the intersection problem is $O(n^{3})$, the same
+%as the complexity of the numerical computations
+%\cite{GEORGELIU}, \cite{ROSEWHITTEN}.  For the
+%new approach, the complexity of the second part is reduced to
+%$O(n^{2} (\log n)^{2})$. 
+%
+%To our knowledge, the m-tree previously has not been applied in this
+%fashion to the numerical factorization, but it has been used,
+%directly or indirectly, in several optimal order algorithms for
+%computing the fill-in during the symbolic factorization phase
+%[4] - [10], [5], [6]. In \S 1.3., we analyze the complexity of the old and new
+%approaches to the intersection problem for the special case of
+%an $n \times n$ grid ordered by nested dissection. The special
+%structure of this problem allows us to make exact estimates of
+%the complexity. To our knowledge, the m-tree previously has not been applied in this
+%fashion to the numerical factorization, but it has been used,
+%directly or indirectly, in several optimal order algorithms for
+%computing the fill-in during the symbolic factorization phase
+%[4] - [10], [5], [6].
+%
+%In \S 1.2, we review the bordering algorithm, and introduce
+%the sorting and intersection problems that arise in the
+%sparse formulation of the algorithm.  
+%In \S 1.3., we analyze the complexity of the old and new
+%approaches to the intersection problem for the special case of
+%an $n \times n$ grid ordered by nested dissection. The special
+%structure of this problem allows us to make exact estimates of
+%the complexity. To our knowledge, the m-tree previously has not been applied in this
+%fashion to the numerical factorization, but it has been used,
+%directly or indirectly, in several optimal order algorithms for
+%computing the fill-in during the symbolic factorization phase
+%[4] - [10], [5], [6].
+%
+%
+%For the old approach, we show that the
+%complexity of the intersection problem is $O(n^{3})$, the same
+%as the complexity of the numerical computations.  For the
+%new approach, the complexity of the second part is reduced to
+%$O(n^{2} (\log n)^{2})$.  
+%
+%To our knowledge, the m-tree previously has not been applied in this
+%fashion to the numerical factorization, but it has been used,
+%directly or indirectly, in several optimal order algorithms for
+%computing the fill-in during the symbolic factorization phase
+%[4] - [10], [5], [6]. In \S 1.3., we analyze the complexity of the old and new
+%approaches to the intersection problem for the special case of
+%an $n \times n$ grid ordered by nested dissection. The special
+%structure of this problem allows us to make exact estimates of
+%the complexity. To our knowledge, the m-tree previously has not been applied in this
+%fashion to the numerical factorization, but it has been used,
+%directly or indirectly, in several optimal order algorithms for
+%computing the fill-in during the symbolic factorization phase
+%[4] - [10], [5], [6].
+%This is accomplished by exploiting the m-tree,
+%a particular spanning tree for the graph of the filled-in matrix.
+%To our knowledge, the m-tree previously has not been applied in this
+%fashion to the numerical factorization, but it has been used,
+%directly or indirectly, in several optimal order algorithms for
+%computing the fill-in during the symbolic factorization phase
+%\cite{EISENSTAT} - \cite{LIU2}, \cite{ROSE76},  \cite{SCHREIBER}.
+%
+%% End of ltexpprt.tex
+%%

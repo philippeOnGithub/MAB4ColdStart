@@ -1,0 +1,434 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2014.5.27)  28 MAY 2014 23:28
+entering extended mode
+ %&-line parsing enabled.
+**ColdStart.tex
+(./ColdStart.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
+ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
+9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
+skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
+orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
+, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
+rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
+(/usr/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf-texlive/tex/latex/base/leqno.clo
+File: leqno.clo 1998/08/17 v1.1c Standard LaTeX option (left equation numbers)
+)
+(/usr/share/texmf-texlive/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (./ltexpprt.sty
+*** ACM/SIAM LaTeX2E Preprint Series macro package, version 1.0, September 5, 1
+996 ***
+\outerparskip=\skip43
+\c@@theorem=\count87
+\c@@algorithm=\count88
+\c@lemma=\count89
+\c@fact=\count90
+\c@corollary=\count91
+\c@axiom=\count92
+\c@cond=\count93
+\c@property=\count94
+\c@proposition=\count95
+\c@Conjecture=\count96
+\c@Definition=\count97
+\c@Lemma=\count98
+\c@Remark=\count99
+) (/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2009/08/25 v0.04m Graphics/color for pdfTeX
+
+
+! Package pdftex.def Error: PDF mode expected, but DVI mode detected!
+(pdftex.def)                If you are using `latex', then call `pdflatex'.
+(pdftex.def)                Otherwise check and correct the driver options.
+(pdftex.def)                Error recovery by switching to PDF mode.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.385     }\@ehc
+                
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+\Gread@gobject=\count100
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+) (/usr/share/texmf-texlive/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip44
+\subfigcapskip=\skip45
+\subfigcaptopadj=\dimen105
+\subfigbottomskip=\skip46
+\subfigcapmargin=\dimen106
+\subfiglabelskip=\skip47
+\c@subfigure=\count101
+\c@lofdepth=\count102
+\c@subtable=\count103
+\c@lotdepth=\count104
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texmf-texlive/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip48
+\subfig@bottom=\skip49
+)
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+(/usr/share/texmf-texlive/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/share/texmf-texlive/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count105
+\float@exts=\toks15
+\float@box=\box26
+\@float@everytoks=\toks16
+\@floatcapt=\box27
+)
+(/usr/share/texmf-texlive/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks17
+\c@algorithm=\count106
+)
+(/usr/share/texmf-texlive/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+(/usr/share/texmf-texlive/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count107
+\c@ALG@rem=\count108
+\c@ALG@nested=\count109
+\ALG@tlm=\skip50
+\ALG@thistlm=\skip51
+\c@ALG@Lnr=\count110
+\c@ALG@blocknr=\count111
+\c@ALG@storecount=\count112
+\c@ALG@tmpcounter=\count113
+\ALG@tmplength=\skip52
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+)
+\c@mydef=\count114
+ (/usr/share/texmf-texlive/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\@emptytoks=\toks18
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip53
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-texlive/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks19
+\ex@=\dimen107
+))
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen108
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count115
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count116
+\leftroot@=\count117
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count118
+\DOTSCASE@=\count119
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen109
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count120
+\c@MaxMatrixCols=\count121
+\dotsspace@=\muskip11
+\c@parentequation=\count122
+\dspbrk@lvl=\count123
+\tag@help=\toks20
+\row@=\count124
+\column@=\count125
+\maxfields@=\count126
+\andhelp@=\toks21
+\eqnshift@=\dimen110
+\alignsep@=\dimen111
+\tagshift@=\dimen112
+\tagwidth@=\dimen113
+\totwidth@=\dimen114
+\lineht@=\dimen115
+\@envbody=\toks22
+\multlinegap=\skip54
+\multlinetaggap=\skip55
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+) (./raccourcis.tex)
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/etc/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Package option `usenames' ignored on input line 216.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+
+(/usr/share/texmf-texlive/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+)) (./ColdStart.aux)
+\openout1 = `ColdStart.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+
+(/usr/share/texmf/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count127
+\scratchdimen=\dimen116
+\scratchbox=\box30
+\nofMPsegments=\count128
+\nofMParguments=\count129
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count130
+\MPscratchDim=\dimen117
+\MPnumerator=\count131
+\everyMPtoPDFconversion=\toks25
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 146.
+ (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 146.
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+Underfull \hbox (badness 4556) in paragraph at lines 146--146
+[][]\OT1/cmr/m/n/8 University of Lille / LIFL (CNRS) & IN-RIA Lille
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--146
+\OT1/cmr/m/n/8 Nord Eu-rope, 59650 Vil-leneuve d'Ascq, France, first-
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 1755) has occurred while \output is active []
+
+ [2]
+Underfull \hbox (badness 10000) in paragraph at lines 341--342
+[]\OT1/cmr/m/it/10 When a
+ []
+
+
+Underfull \hbox (badness 3312) in paragraph at lines 354--355
+[]\OT1/cmr/m/it/10 When a
+ []
+
+
+Underfull \hbox (badness 4391) in paragraph at lines 382--382
+[]\OT1/cmr/bx/n/10 Bandit al-go-rithms and per-spec-tives for
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 393.
+
+(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 393.
+ [3] [4]
+Overfull \hbox (3.83371pt too wide) in paragraph at lines 577--590
+ [][] 
+ []
+
+
+Underfull \hbox (badness 1158) in paragraph at lines 609--610
+[]\OT1/cmr/m/it/10 Ad.1 \OT1/cmr/m/n/10 Firstly, the miss-ing val-ues in a col-
+umn
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 609--610
+
+ []
+
+[5]
+Underfull \hbox (badness 1107) in paragraph at lines 619--620
+ \OT1/cmr/bx/n/10 5.2.2 Set-tings of the A-LinUCB al-go-rithms[]
+ []
+
+[6] <newUser-Movielen.pdf, id=38, 554.07pt x 430.60875pt>
+File: newUser-Movielen.pdf Graphic file (type pdf)
+
+<use newUser-Movielen.pdf>
+<newUser-Netflix.pdf, id=39, 554.07pt x 430.60875pt>
+File: newUser-Netflix.pdf Graphic file (type pdf)
+ <use newUser-Netflix.pdf>
+<newUser-Yahoo.pdf, id=40, 554.07pt x 430.60875pt>
+File: newUser-Yahoo.pdf Graphic file (type pdf)
+ <use newUser-Yahoo.pdf>
+<newItem-Movielen.pdf, id=41, 554.07pt x 430.60875pt>
+File: newItem-Movielen.pdf Graphic file (type pdf)
+
+<use newItem-Movielen.pdf>
+<newItem-Netflix.pdf, id=42, 554.07pt x 430.60875pt>
+File: newItem-Netflix.pdf Graphic file (type pdf)
+ <use newItem-Netflix.pdf>
+<newItem-Yahoo.pdf, id=43, 554.07pt x 430.60875pt>
+File: newItem-Yahoo.pdf Graphic file (type pdf)
+ <use newItem-Yahoo.pdf>
+Underfull \vbox (badness 1789) has occurred while \output is active []
+
+ [7]
+[8 <./newUser-Movielen.pdf> <./newUser-Netflix.pdf> <./newUser-Yahoo.pdf> <./ne
+wItem-Movielen.pdf> <./newItem-Netflix.pdf> <./newItem-Yahoo.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
+(./ColdStart.bbl
+Underfull \hbox (badness 8113) in paragraph at lines 4--9
+[]\OT1/cmr/m/n/9 Yasin Abbasi-Yadkori, D^^Savid P^^Sal, and Csaba
+ []
+
+
+Underfull \hbox (badness 1048) in paragraph at lines 59--63
+[]\OT1/cmr/m/n/9 Xuan Nhat Lam, Thuc Vu, Trong Duc Le, and
+ []
+
+
+Underfull \hbox (badness 1502) in paragraph at lines 78--82
+\OT1/cmr/m/n/9 Schapire.  A contextual-bandit ap-proach to per-
+ []
+
+
+Underfull \hbox (badness 2753) in paragraph at lines 78--82
+\OT1/cmr/m/n/9 son-al-ized news ar-ti-cle rec-om-men-da-tion.  \OT1/cmr/m/it/9 
+CoRR\OT1/cmr/m/n/9 ,
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10])
+[11
+
+] (./ColdStart.aux) ) 
+Here is how much of TeX's memory you used:
+ 3279 strings out of 493849
+ 40799 string characters out of 1152846
+ 121216 words of memory out of 3000000
+ 6507 multiletter control sequences out of 15000+50000
+ 13128 words of font info for 51 fonts, out of 3000000 for 9000
+ 714 hyphenation exceptions out of 8191
+ 31i,15n,35p,1221b,324s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
+mbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share
+/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texl
+ive/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/type1/public/a
+msfonts/cm/cmmi7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
+mmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/tex
+mf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/f
+onts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/type1/pu
+blic/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts
+/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
+/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-texli
+ve/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-texlive/fonts/typ
+e1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/type1/public/am
+sfonts/cm/cmti10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
+mti9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/symbols/msbm10.p
+fb>
+Output written on ColdStart.pdf (11 pages, 1191701 bytes).
+PDF statistics:
+ 162 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+

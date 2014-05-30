@@ -1,0 +1,27 @@
+\relax 
+\citation{..}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{1}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Problem Definition}{1}}
+\newlabel{GenerealProbFormulation}{{3}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}New User/Item Problem}{1}}
+\bibcite{BANKSMITH}{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}New System Problem}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}LinUCB Methods for Cold-start Problems}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Bandit setting for the new user/item problem.}}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}LinUCB for New User/Item Problems}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}LinUCB for New System Problem}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Bandit setting for the new system problem.}}{2}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Number of users, items and ratings in datasets after eliminating the users without any votes from original datasets.}}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Experiment Setting}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Data sets}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Comparision algorithms}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Results and Analysis}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusions}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Acknowledgments}{2}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Cummulative regrets for the new user problem}}{3}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Cummulative regrets for the new item problem}}{3}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Cummulative regrets for new system problems}}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Cummulative regrets for the new user problem}}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Cummulative regrets for new user problems}}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Cummulative regrets for new user problems}}{4}}
