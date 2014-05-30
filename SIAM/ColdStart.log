@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.5.27)  30 MAY 2014 14:22
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.5.27)  30 MAY 2014 14:40
 entering extended mode
  %&-line parsing enabled.
 **ColdStart.tex
@@ -282,45 +282,45 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 1755) has occurred while \output is active []
 
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 341--342
+Underfull \hbox (badness 10000) in paragraph at lines 340--341
 []\OT1/cmr/m/it/10 When a
  []
 
 
-Underfull \hbox (badness 3312) in paragraph at lines 354--355
+Underfull \hbox (badness 3312) in paragraph at lines 353--354
 []\OT1/cmr/m/it/10 When a
  []
 
 
-Underfull \hbox (badness 4391) in paragraph at lines 382--382
+Underfull \hbox (badness 4391) in paragraph at lines 381--381
 []\OT1/cmr/bx/n/10 Bandit al-go-rithms and per-spec-tives for
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 393.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 392.
 
 (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 393.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 392.
  [3] [4]
-Overfull \hbox (3.83371pt too wide) in paragraph at lines 577--590
+Overfull \hbox (3.83371pt too wide) in paragraph at lines 576--589
  [][] 
  []
 
 
-Underfull \hbox (badness 1158) in paragraph at lines 609--610
+Underfull \hbox (badness 1158) in paragraph at lines 608--609
 []\OT1/cmr/m/it/10 Ad.1 \OT1/cmr/m/n/10 Firstly, the miss-ing val-ues in a col-
 umn
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 609--610
+Underfull \hbox (badness 10000) in paragraph at lines 608--609
 
  []
 
 [5]
-Underfull \hbox (badness 1107) in paragraph at lines 619--620
+Underfull \hbox (badness 1107) in paragraph at lines 618--619
  \OT1/cmr/bx/n/10 5.2.2 Set-tings of the A-LinUCB al-go-rithms[]
  []
 
@@ -411,7 +411,7 @@ e1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/type1/public/am
 sfonts/cm/cmti10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
 mti9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/symbols/msbm10.p
 fb>
-Output written on ColdStart.pdf (11 pages, 1191710 bytes).
+Output written on ColdStart.pdf (11 pages, 1191701 bytes).
 PDF statistics:
  162 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
