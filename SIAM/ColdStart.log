@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2014.5.27)  28 MAY 2014 23:28
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.5.27)  30 MAY 2014 14:22
 entering extended mode
  %&-line parsing enabled.
 **ColdStart.tex
@@ -68,27 +68,12 @@ Package graphics Info: Driver file: pdftex.def on input line 91.
 
 (/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2009/08/25 v0.04m Graphics/color for pdfTeX
-
-
-! Package pdftex.def Error: PDF mode expected, but DVI mode detected!
-(pdftex.def)                If you are using `latex', then call `pdflatex'.
-(pdftex.def)                Otherwise check and correct the driver options.
-(pdftex.def)                Error recovery by switching to PDF mode.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.385     }\@ehc
-                
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 \Gread@gobject=\count100
 ))
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
-) (/usr/share/texmf-texlive/tex/latex/subfigure/subfigure.sty
+)
+(/usr/share/texmf-texlive/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip44
 \subfigcapskip=\skip45
@@ -399,8 +384,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ] (./ColdStart.aux) ) 
 Here is how much of TeX's memory you used:
- 3279 strings out of 493849
- 40799 string characters out of 1152846
+ 3279 strings out of 493848
+ 40799 string characters out of 1152823
  121216 words of memory out of 3000000
  6507 multiletter control sequences out of 15000+50000
  13128 words of font info for 51 fonts, out of 3000000 for 9000
@@ -426,7 +411,7 @@ e1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/type1/public/am
 sfonts/cm/cmti10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
 mti9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/symbols/msbm10.p
 fb>
-Output written on ColdStart.pdf (11 pages, 1191701 bytes).
+Output written on ColdStart.pdf (11 pages, 1191710 bytes).
 PDF statistics:
  162 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
